@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.luv2code.ecommerce.entity.Product;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin
 public interface ProductRepository  extends JpaRepository<Product, Long>{
 	
 	Page<Product> findByCategoryId(@RequestParam("id") Long id ,Pageable pageable);
